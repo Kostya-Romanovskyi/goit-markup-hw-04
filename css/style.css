@@ -5,6 +5,7 @@
   --active-color: #2196f3;
   --white-color: #ffffff;
   --link-color-rgba-60: rgba(255, 255, 255, 0.6);
+  --icon-color: #afb1b8;
   /* background color */
   --bg-dark: #2f303a;
   --bg-light: #f5f4fa;
@@ -124,6 +125,7 @@ img {
   margin-left: 50px;
 }
 .auth-link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -136,14 +138,33 @@ img {
 .auth-link:hover,
 .auth-link:focus {
   color: var(--active-color);
+  fill: var(--active-color);
+}
+.auth-icon {
+  margin-right: 10px;
+
+  fill: var(--secondary-color);
+}
+
+.auth-link:hover .auth-icon {
+  fill: var(--active-color);
+}
+.auth-link:focus .auth-icon {
+  fill: var(--active-color);
 }
 
 /* ГЕРОЙ */
 .hero {
   background-color: var(--bg-dark);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/index/hero/bg-hero-sq.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  max-width: 1600px;
 
   text-align: center;
-
+  margin: 0 auto;
   padding: 200px 0;
 }
 .hero-title {
@@ -201,6 +222,32 @@ img {
   justify-content: space-between;
 }
 .pros-item {
+  width: calc((100% - 90px) / 4);
+}
+.pros-item::before {
+  content: '';
+  display: block;
+  height: 120px;
+  border-radius: 4px;
+
+  background-color: var(--bg-light);
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  background-position: center;
+
+  margin-bottom: 30px;
+}
+.antenna:before {
+  background-image: url('../images/index/strengths/antenna.svg');
+}
+.clock::before {
+  background-image: url('../images/index/strengths/clock.svg');
+}
+.diagram::before {
+  background-image: url('../images/index/strengths/diagram.svg');
+}
+.astronaut:before {
+  background-image: url('../images/index/strengths/astronaut.svg');
 }
 .pros-title {
   font-weight: 700;
@@ -268,6 +315,39 @@ img {
   color: var(--secondary-color);
 
   margin-bottom: 30px;
+}
+.team-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.team-icons-item {
+  margin: 0 0 30px 10px;
+}
+.team-icons-item:first-child {
+  margin-left: 0;
+}
+.team-icons-link {
+  display: block;
+  padding: 12px;
+  border-radius: 50%;
+}
+.team-icons-link:hover {
+  background-color: var(--active-color);
+}
+.team-icons-link:hover .team-icons-unit {
+  fill: var(--white-color);
+}
+.team-icons-unit {
+  width: 20px;
+  height: 20px;
+
+  fill: var(--icon-color);
+}
+.icon-instagram {
+  align-self: center;
+}
+.icon-twitter {
 }
 
 /* FOOTER */
