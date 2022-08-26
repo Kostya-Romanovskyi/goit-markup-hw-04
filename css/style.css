@@ -344,9 +344,6 @@ img {
 .team-icons-unit {
   display: block;
 
-  width: 20px;
-  height: 20px;
-
   fill: var(--icon-color);
 }
 
