@@ -225,7 +225,15 @@ img {
 .pros-item {
   width: calc((100% - 90px) / 4);
 }
-.pros-item::before {
+.pros-icon {
+  border-radius: 4px;
+
+  background-color: var(--bg-light);
+
+  margin-bottom: 30px;
+}
+
+/* .pros-item::before {
   content: '';
   display: block;
   height: 120px;
@@ -249,7 +257,8 @@ img {
 }
 .astronaut:before {
   background-image: url('../images/index/strengths/astronaut.svg');
-}
+} */
+
 .pros-title {
   font-weight: 700;
   font-size: 14px;
